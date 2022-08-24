@@ -1,18 +1,23 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
-    compileSdk 32
+    compileSdk AndroidConfig.compileSdkVersion
 
     defaultConfig {
         applicationId "com.ahmaddudayef.mitrais.githubclient"
-        minSdk 21
-        targetSdk 32
-        versionCode 1
-        versionName "1.0"
+        minSdk AndroidConfig.minSdkVersion
+        targetSdk AndroidConfig.targetSdkVersion
+        versionCode AndroidConfig.versionCode
+        versionName AndroidConfig.versionName
+        vectorDrawables.useSupportLibrary = true
 
+        buildConfigField("String", "BASE_URL", '"https://api.github.com/"')
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -29,15 +34,42 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
+    implementation AndroidLib.kotlinStdlib
+    implementation AndroidLib.androidxCore
+    implementation AndroidLib.androidxAppcompat
+    implementation AndroidLib.material
+    implementation AndroidLib.androidxConstraintLayout
+    implementation AndroidLib.preferencesDataStore
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.5.0'
-    implementation 'com.google.android.material:material:1.6.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation AndroidLib.navFragment
+    implementation AndroidLib.navUi
+
+    implementation AndroidLib.hilt
+    kapt AndroidLib.hiltCompiler
+
+    implementation AndroidLib.viewmodel
+    implementation AndroidLib.livedata
+
+    implementation AndroidLib.coroutinesCore
+    implementation AndroidLib.coroutinesAndroid
+
+    implementation AndroidLib.retrofit
+    implementation AndroidLib.retrofitGson
+    implementation AndroidLib.okhttpLoggingInterceptor
+
+    implementation AndroidLib.coil
+
+    implementation AndroidLib.room
+    kapt AndroidLib.roomCompiler
+
+    testImplementation AndroidTestLib.jUnit
+    androidTestImplementation AndroidTestLib.androidTestJUnit
+    androidTestImplementation AndroidTestLib.androidTestEspressoCore
+    androidTestImplementation AndroidTestLib.androidTestNavigation
 }
