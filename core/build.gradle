@@ -1,23 +1,20 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
-    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
     compileSdk AndroidConfig.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.ahmaddudayef.mitrais.githubclient"
         minSdk AndroidConfig.minSdkVersion
         targetSdk AndroidConfig.targetSdkVersion
         versionCode AndroidConfig.versionCode
         versionName AndroidConfig.versionName
-        vectorDrawables.useSupportLibrary = true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -39,38 +36,21 @@ android {
 }
 
 dependencies {
-    implementation project(':core')
-
     implementation AndroidLib.kotlinStdlib
     implementation AndroidLib.androidxCore
     implementation AndroidLib.androidxAppcompat
     implementation AndroidLib.material
     implementation AndroidLib.androidxConstraintLayout
-    implementation AndroidLib.preferencesDataStore
-
-    implementation AndroidLib.navFragment
-    implementation AndroidLib.navUi
-
-    implementation AndroidLib.hilt
-    kapt AndroidLib.hiltCompiler
-
-    implementation AndroidLib.viewmodel
-    implementation AndroidLib.livedata
 
     implementation AndroidLib.coroutinesCore
     implementation AndroidLib.coroutinesAndroid
 
-    implementation AndroidLib.retrofit
-    implementation AndroidLib.retrofitGson
-    implementation AndroidLib.okhttpLoggingInterceptor
+    implementation AndroidLib.viewmodel
+    implementation AndroidLib.livedata
 
     implementation AndroidLib.coil
-
-    implementation AndroidLib.room
-    kapt AndroidLib.roomCompiler
 
     testImplementation AndroidTestLib.jUnit
     androidTestImplementation AndroidTestLib.androidTestJUnit
     androidTestImplementation AndroidTestLib.androidTestEspressoCore
-    androidTestImplementation AndroidTestLib.androidTestNavigation
 }

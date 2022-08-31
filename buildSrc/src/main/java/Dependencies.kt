@@ -7,7 +7,7 @@ object AndroidConfig {
 }
 
 object Versions {
-    const val kotlin = "1.6.10"
+    const val kotlin = "1.7.10"
     const val coreKtx = "1.8.0"
     const val appCompat = "1.5.0"
     const val material = "1.6.1"
@@ -18,6 +18,7 @@ object Versions {
     const val lifecycle = "2.5.1"
     const val coroutines = "1.6.4"
     const val retrofit = "2.9.0"
+    const val moshi = "1.13.0"
     const val loggingInterceptor = "4.10.0"
     const val coil = "2.2.0"
     const val room = "2.4.3"
@@ -45,6 +46,8 @@ object AndroidLib {
     const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitGson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+    const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
+    const val retrofitMoshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
     const val okhttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
     const val coil = "io.coil-kt:coil:${Versions.coil}"
     const val room = "androidx.room:room-runtime:${Versions.room}"
