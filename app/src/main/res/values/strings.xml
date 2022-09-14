@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">GithubClient</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="list_user">List User</string>
+    <string name="detail_user">Detail User</string>
+    <string name="tab_followers">Followers</string>
+    <string name="tab_following">Following</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

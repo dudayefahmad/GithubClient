@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_all_small">8dp</dimen>
+    <dimen name="margin_all_medium">16dp</dimen>
+
+    <dimen name="elevation_all_tiny">4dp</dimen>
+
+    <dimen name="height_all_poster_medium">150dp</dimen>
+
+    <dimen name="radius_all_tiny">4dp</dimen>
+
+    <dimen name="text_all_title">16sp</dimen>
+    <dimen name="text_all_desc">14sp</dimen>
+</resources>

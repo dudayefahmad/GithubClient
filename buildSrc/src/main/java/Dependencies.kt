@@ -25,6 +25,7 @@ object Versions {
     const val jUnit = "4.13.2"
     const val androidTestJunit = "1.1.3"
     const val androidTestEspressoCore = "3.4.0"
+    const val circleImageViewVersion = "3.1.0"
 }
 
 
@@ -40,6 +41,8 @@ object AndroidLib {
     const val androidxConstraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
     const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.hilt}"
+    const val hiltAndroidCompiler = "androidx.hilt:hilt-compiler:${Versions.hilt}"
+    const val hiltViewModel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hilt}"
     const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val livedata = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
     const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
@@ -52,6 +55,7 @@ object AndroidLib {
     const val coil = "io.coil-kt:coil:${Versions.coil}"
     const val room = "androidx.room:room-runtime:${Versions.room}"
     const val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
+    const val circleImage = "de.hdodenhof:circleimageview:${Versions.circleImageViewVersion}"
 }
 
 object AndroidTestLib {

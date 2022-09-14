@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview_item_account"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_all_medium"
+    android:layout_marginTop="@dimen/margin_all_small"
+    android:layout_marginEnd="@dimen/margin_all_medium"
+    android:elevation="@dimen/elevation_all_tiny"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/radius_all_tiny"
+    app:cardMaxElevation="@dimen/elevation_all_tiny"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivUser"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            tools:src="@drawable/ic_100tb"
+            android:layout_marginStart="@dimen/margin_all_small"
+            android:layout_marginTop="@dimen/margin_all_small"
+            android:layout_marginBottom="@dimen/margin_all_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvUsername"
+            style="@style/TextContent.Title"
+            tools:text="Hello World"
+            android:layout_margin="@dimen/margin_all_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivUser"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
